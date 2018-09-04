@@ -8,7 +8,7 @@
 
 #ifndef PARTICLE_FILTER_H_
 #define PARTICLE_FILTER_H_
-
+#include <random>
 #include "helper_functions.h"
 
 struct Particle {
@@ -39,7 +39,7 @@ class ParticleFilter {
 	std::vector<double> weights;
 	
 public:
-	
+    std::default_random_engine gen;
 	// Set of current particles
 	std::vector<Particle> particles;
 
